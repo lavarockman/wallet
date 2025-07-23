@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cards – Levi Vandyken</title>
+  <style>
+    :root {
+      --bg: #f5f5f5;
+      --card-bg: #ffffff;
+      --text: #222;
+      --accent: #0070f3;
+      --shadow: rgba(0, 0, 0, 0.08);
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      color: #555;
+      font-size: 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 900px;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px var(--shadow);
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 14px var(--shadow);
+    }
+    .card a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cards</h1>
+    <p>Quick access to my shared files</p>
+  </header>
+
+  <main class="grid">
+    <!-- Example card for a file -->
+    <div class="card">
+      <h2>Example File</h2>
+      <p>Direct link to file.txt</p>
+      <a href="file.txt" target="_blank">View File</a>
+    </div>
+
+    <!-- Add more cards for additional files -->
+    <div class="card">
+      <h2>Another Resource</h2>
+      <p>Description of what this file is</p>
+      <a href="anotherfile.txt" target="_blank">Open</a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Levi Vandyken
+  </footer>
+</body>
+</html>
